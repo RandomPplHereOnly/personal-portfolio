@@ -10,7 +10,7 @@ export const NAV_LINKS = [
 ];
 
 export const SKILLS = {
-  frontend: { icon: <Layout className="w-5 h-5" />, title: "Frontend", skills: ["React", "Next.js", "Nuxt.js", "TypeScript", "Tailwind CSS", "Vue.js" , "Bootstrap", "Android", "Kotlin"},
+  frontend: { icon: <Layout className="w-5 h-5" />, title: "Frontend", skills: ["React", "Next.js", "Nuxt.js", "TypeScript", "Tailwind CSS", "Vue.js" , "Bootstrap", "Android", "Kotlin"]},
   backend: { icon: <Server className="w-5 h-5" />, title: "Backend", skills: ["Node.js", "Python", "Go", "Laravel", "Express", "NestJS", "GraphQL"] },
   database: { icon: <Database className="w-5 h-5" />, title: "Database", skills: ["PostgreSQL", "MongoDB", "Redis", "Supabase", "Prisma"] },
   devops: { icon: <Cpu className="w-5 h-5" />, title: "DevOps", skills: ["Docker", "AWS", "CI/CD", "Terraform", "Vercel"] },
