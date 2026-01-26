@@ -10,7 +10,7 @@ export const NAV_LINKS = [
 ];
 
 export const SKILLS = {
-  frontend: { icon: <Layout className="w-5 h-5" />, title: "Frontend", skills: ["React", "Next.js", "Nuxt.js", "TypeScript", "Tailwind CSS", "Vue.js" , "Bootstrap"] },
+  frontend: { icon: <Layout className="w-5 h-5" />, title: "Frontend", skills: ["React", "Next.js", "Nuxt.js", "TypeScript", "Tailwind CSS", "Vue.js" , "Bootstrap", "Android", "Kotlin"},
   backend: { icon: <Server className="w-5 h-5" />, title: "Backend", skills: ["Node.js", "Python", "Go", "Laravel", "Express", "NestJS", "GraphQL"] },
   database: { icon: <Database className="w-5 h-5" />, title: "Database", skills: ["PostgreSQL", "MongoDB", "Redis", "Supabase", "Prisma"] },
   devops: { icon: <Cpu className="w-5 h-5" />, title: "DevOps", skills: ["Docker", "AWS", "CI/CD", "Terraform", "Vercel"] },
@@ -98,19 +98,7 @@ export const EXPERIENCE = [
     company: "PT. Jovimaro Karya Agung",
     role: "Full Stack Developer",
     period: "2020 - 2025",
-    description: "Leading a team of 6 developers building scalable SaaS products. Improved CI/CD pipeline reducing build times by 40%."
-  },
-  {
-    company: "Creative Pulse Agency",
-    role: "Full Stack Developer",
-    period: "2018 - 2021",
-    description: "Developed award-winning marketing sites and custom web applications for Fortune 500 clients."
-  },
-  {
-    company: "Freelance",
-    role: "Web Developer",
-    period: "2016 - 2018",
-    description: "Partnered with early-stage startups to build MVPs and iterate on product-market fit."
+    description: "Partnered with early-stage startups to improve accuracy and detection of smart monitoring position system"
   }
 ];
 
