@@ -1,57 +1,43 @@
-import { useState, useEffect } from 'react';
-
-import { Navbar, Footer, ScrollProgress } from './temp/components';
-import {
-  Hero,
-  TerminalAbout,
-  TechStack,
-  Projects,
-  UiUxShowcase,
-  CaseStudies,
-  StatsSection,
-  Experience,
-  Testimonials,
-  Blog,
-  Contact,
-} from './temp/sections';
-
-import { Toast } from './temp/components';
+import React, { useState, useEffect } from 'react';
+import { Navbar, Footer, ScrollProgress, Toast } from './components/Layout';
+import { Hero, TerminalAbout, TechStack, Projects, UiUxShowcase, StatsSection, Experience, Contact } from './components/Sections';
 
 const App = () => {
   const [darkMode, setDarkMode] = useState(false);
   const [showToast, setShowToast] = useState(false);
 
   useEffect(() => {
-    if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+    if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
       setDarkMode(true);
     }
   }, []);
 
-  return (
-    <div className={darkMode ? 'dark bg-slate-900' : 'bg-white'}>
-      <ScrollProgress />
-      <Navbar darkMode={darkMode} toggleTheme={() => setDarkMode(!darkMode)} />
+  const toggleTheme = () => {
+    setDarkMode(!darkMode);
+  };
 
+  const handleSendMessage = () => {
+    setShowToast(true);
+  };
+
+  return (
+    <div className={`min-h-screen transition-colors duration-300 font-sans selection:bg-teal-500/30 ${darkMode ? 'dark bg-slate-900' : 'bg-white'}`}>
+      <ScrollProgress />
+      <Navbar darkMode={darkMode} toggleTheme={toggleTheme} />
+      
       <main>
         <Hero />
         <TerminalAbout />
         <TechStack />
         <Projects />
-        <UiUxShowcase />
-        <CaseStudies />
+        {/* <UiUxShowcase /> */}
         <StatsSection />
         <Experience />
-        <Testimonials />
-        <Blog />
-        <Contact onSendMessage={() => setShowToast(true)} />
+        <Contact onSendMessage={handleSendMessage} />
       </main>
 
       <Footer />
-      <Toast
-        message="Message sent successfully!"
-        isVisible={showToast}
-        onClose={() => setShowToast(false)}
-      />
+      <Toast message="Message sent successfully!" isVisible={showToast} onClose={() => setShowToast(false)} />
     </div>
   );
 };
