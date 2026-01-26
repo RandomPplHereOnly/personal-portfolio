@@ -273,7 +273,7 @@ const CASE_STUDY = {
 const EXPERIENCE = [
   {
     company: "PT. Jovimaro Karya Agung",
-    role: "Senior Full Stack Engineer",
+    role: "Full Stack Developer",
     period: "2020 - 2025",
     description: "Leading a team of 6 developers building scalable SaaS products. Improved CI/CD pipeline reducing build times by 40%."
   },
@@ -425,7 +425,7 @@ const Navbar = ({ darkMode, toggleTheme }) => {
     }`}>
       <div className="max-w-6xl mx-auto px-6 flex justify-between items-center">
         <a href="#" className="text-xl font-bold font-mono tracking-tighter text-slate-800 dark:text-slate-100 hover:text-teal-600 dark:hover:text-teal-400 transition-colors">
-          Temporary<span className="text-teal-500">.dev</span>
+          ernesto<span className="text-teal-500">.dev</span>
         </a>
 
         <div className="hidden md:flex items-center space-x-8">
@@ -543,7 +543,7 @@ const Hero = () => {
 
 const TerminalAbout = () => {
   const [history, setHistory] = useState([
-    { type: 'output', content: 'Welcome to temporary.sh v1.0.0' },
+    { type: 'output', content: 'Welcome to ernesto.sh v1.0.0' },
     { type: 'output', content: 'Type "help" to see available commands.' },
   ]);
   const [input, setInput] = useState('');
@@ -566,7 +566,7 @@ const TerminalAbout = () => {
           response = 'Frontend: React, Next.js | Backend: Node, Go | Database: Postgres, Redis';
           break;
         case 'contact':
-          response = 'Email: hello@temporary.dev | Twitter: @temporary';
+          response = 'Email: ernestokevin1996@gmail.com | LinkedIn: Ernesto Kevin Handoyo';
           break;
         case 'clear':
           setHistory([]);
@@ -614,7 +614,7 @@ const TerminalAbout = () => {
               <div className="w-3 h-3 rounded-full bg-yellow-500" />
               <div className="w-3 h-3 rounded-full bg-green-500" />
             </div>
-            <div className="ml-4 text-slate-400 text-xs">user@temporary:~/interactive</div>
+            <div className="ml-4 text-slate-400 text-xs">user@ernesto:~/interactive</div>
           </div>
           <div 
             ref={terminalBodyRef}
@@ -1070,10 +1070,7 @@ const Footer = () => {
           <a href="#" className="text-slate-500 hover:text-teal-600 dark:hover:text-teal-400 transition-colors">
             <Github size={20} />
           </a>
-          <a href="#" className="text-slate-500 hover:text-teal-600 dark:hover:text-teal-400 transition-colors">
-            <Twitter size={20} />
-          </a>
-          <a href="#" className="text-slate-500 hover:text-teal-600 dark:hover:text-teal-400 transition-colors">
+          <a href="https://www.linkedin.com/in/ernesto-kevin-handoyo" className="text-slate-500 hover:text-teal-600 dark:hover:text-teal-400 transition-colors">
             <Linkedin size={20} />
           </a>
           <a href="#" className="text-slate-500 hover:text-teal-600 dark:hover:text-teal-400 transition-colors">
@@ -1122,7 +1119,7 @@ const App = () => {
         <TerminalAbout />
         <TechStack />
         <Projects />
-        <UiUxShowcase />
+        {/* <UiUxShowcase /> */}
         <StatsSection />
         <Experience />
         <Contact onSendMessage={handleSendMessage} />
